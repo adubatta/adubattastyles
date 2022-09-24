@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/primaryLightColor"
+    android:paddingLeft="@dimen/paddingLeft"
+    android:paddingRight="@dimen/paddingRight"
+    android:paddingTop="@dimen/paddingTop"
+    android:paddingBottom="@dimen/paddingBottom"
+    android:layout_marginBottom="@dimen/bottomMargin"
+    android:layout_marginTop="@dimen/topMargin"
+    >
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="15dp" />
+    >
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="170dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editTextHeight"
+        android:layout_marginTop="@dimen/topMargin"
+        android:layout_marginBottom="@dimen/bottomMargin"
         android:gravity="center"
-        android:text="TextView"
-        android:textSize="34sp"
+        android:orientation="vertical"
+        android:text="ADU'S STYLE"
+        android:textSize="@dimen/headerTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.663" />
+
 
     <EditText
         android:id="@+id/editTextTextPersonName"
+        style="@style/EditTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/topMargin"
+        android:layout_marginBottom="@dimen/bottomMargin"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="A Tale To Remember 🔥🔥"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -40,12 +67,46 @@
         android:layout_height="202dp"
         android:foregroundGravity="center_vertical|center"
         android:gravity="center"
-        android:text="Shouro App Mallaka"
-        android:textSize="48sp"
+        android:text="News Flash: Battaboy is the GOAT!!"
+        android:layout_gravity="center"
+        android:textSize="35sp"
+        android:textColor="@color/secondaryDarkColor"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:layout_marginTop="@dimen/topMargin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.155" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Winner Button for the BOYS "
+        style="@style/ButtonStyle"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        app:layout_constraintVertical_bias="0.824" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loser Button for the Haters"
+        android:layout_gravity="center"
+        style="@style/ButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824" />
+
+</LinearLayout>
